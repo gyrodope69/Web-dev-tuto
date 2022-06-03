@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body id="body">
+    <!-- <div id="firstDiv">Im the first div</div>
+    <ul id="element">
+      <li class="list-item">First element</li>
+      <li class="list-item">Second element</li>
+      <li class="list-item">Third element</li>
+    </ul> -->
+    <!-- <table>
+      <tr>
+        <td>One</td>
+        <td>Two</td>
+      </tr>
+      <tr>
+        <td>Three</td>
+        <td>Four</td>
+      </tr>
+    </table> -->
+    <button id="click" onclick=" ">Click Me</button>
+    <script>
+      // **root node**
+      // document.documentElement;
+      // console.log(document.documentElement);
+      // console.log(document.body);
+      // console.log(document.head);
+
+      //*childrens*
+      // console.log(document.body.childNodes);
+      // console.log(document.body.children);
+      // console.log(document.body.firstElementChild);
+      // console.log(document.body.lastElementChild);
+
+      //convert to an array
+      //const childrensOfBody = Array.from(document.body.children);
+      //console.log(childrensOfBody);
+
+      //**Sibling**
+      //console.log(document.body.children[0]);
+      //if we want to see next sibling of the ul tag
+      // const ulTag = document.body.children[0];
+      //console.log(ulTag.nextElementSibling);
+      //if we want to find the childof ulTag and want to find its firstsibling next sibling
+      //const firstsibling = ulTag.children[0];
+      //console.log(firstsibling.nextElementSibling.textContent);
+
+      //** Table DOM Manipulation **
+      // const tableTag= document.body.children[1];
+      // //console.log(tableTag.tBodies[0].rows[0].cells[0].textContent);
+      // console.log(tableTag.tBodies[0].rows[0].cells[1].style="background-color: purple");
+
+      //***ID search***
+      // element.style.backgroundColor = "red";
+      // const utTag = document.getElementById("element");
+      // utTag.style.backgroundColor = "green";
+      // listItem = document.getElementsByClassName("list-item");
+      // console.log(listItem);
+
+      //**QuerySelector**
+      // const list = document.querySelectorAll('ul> li:nth-child(1)');
+      // console.log(list[0].textContent);
+
+      // console.log(element.getAttribute('data'))
+      // console.log(element.setAttribute('Order-status','Pending'));
+      // console.log(element.getAttribute('Order-status'));
+      // console.log(element.hasAttribute('Order-status'));
+      // element.removeAttribute('Order-status');
+      // console.log(element.hasAttribute('Order-status'));
+
+      //** create and remove a  node element **
+      // const newDiv= document.createElement("div");
+      // newDiv.innerHTML=`<div class="Background">
+      //   <h1>This the heading</h1>
+      // </div>`
+      // const newText = document.createTextNode("Namaste World!!!");
+      // newDiv.append(newText)
+      // body.append(newDiv)
+      // body.prepend(newDiv)
+      // body.before(newDiv);
+      // body.after(newDiv);
+      // firstDiv.replaceWith(newDiv);
+      // firstDiv.remove();
+
+      //** Events **
+      function callMe(event) {
+        console.log(event.type);
+        console.log(event.currentTarget);
+        console.log(event.clientX);
+        console.log(event.clientY);
+        alert("Namste World!!");
+      }
+      // click.onclick = function()
+      // {
+      //   alert('Namaste World');
+      // }
+      // click.onclick = callMe;
+
+      click.addEventListener("click", callMe);
+    </script>
+  </body>
+</html>
+
